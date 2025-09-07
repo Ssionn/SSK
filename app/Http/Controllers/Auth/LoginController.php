@@ -22,7 +22,7 @@ class LoginController extends Controller
         if (auth()->attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return to_route('dashboard');
+            return to_route('dashboard.index');
         }
 
         return back()->withErrors([
@@ -30,8 +30,8 @@ class LoginController extends Controller
         ])->onlyInput('email');
     }
 
-    public function logout(Logout $logout): void
+    public function logout(Logout $logout, Request $request): RedirectResponse
     {
-        tap(request()->user(), fn ($request) => $logout($request));
+        return $logout($request);
     }
 }

@@ -1,7 +1,7 @@
 <aside
     class="row-span-2 overflow-y-auto transform transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0 fixed inset-y-0 left-0 w-64 sm:relative sm:w-auto flex flex-col z-50">
     <div class="p-4">
-        <a href="{{ route('dashboard') }}">
+        <a href="{{ route('dashboard.index') }}">
             <x-layouts.assets.application-logo/>
         </a>
     </div>
@@ -9,8 +9,8 @@
     <div class="p-4">
         <x-user-interface.layouts.sidebar.sidebar-list>
             <x-user-interface.layouts.sidebar.sidebar-list-item
-                href="{{ route('dashboard') }}"
-                active="{{ request()->routeIs('dashboard') }}"
+                href="{{ route('dashboard.index') }}"
+                active="{{ request()->routeIs('dashboard.index') }}"
             >
                 Dashboard
             </x-user-interface.layouts.sidebar.sidebar-list-item>
@@ -24,6 +24,13 @@
                 active="{{ request()->routeIs('profile.show') }}"
             >
                 Settings
+            </x-user-interface.layouts.sidebar.sidebar-list-item>
+
+            <x-user-interface.layouts.sidebar.sidebar-list-item
+                href="{{ route('logout') }}"
+                logout
+            >
+                Logout
             </x-user-interface.layouts.sidebar.sidebar-list-item>
         </x-user-interface.layouts.sidebar.sidebar-list>
     </div>

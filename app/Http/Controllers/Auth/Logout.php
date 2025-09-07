@@ -12,7 +12,7 @@ class Logout
     {
         $user = $request->user();
 
-        $user->logout();
+        auth()->logout();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();

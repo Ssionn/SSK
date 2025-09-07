@@ -23,6 +23,6 @@ class RegisteredUserController extends Controller
 
         auth()->login($user);
 
-        return to_route('dashboard');
+        return to_route('dashboard.index');
     }
 }
