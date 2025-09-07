@@ -8,7 +8,10 @@
 
     <div class="p-4">
         <x-user-interface.layouts.sidebar.sidebar-list>
-            <x-user-interface.layouts.sidebar.sidebar-list-item href="{{ route('dashboard') }}" active="{{ request()->routeIs('dashboard') }}">
+            <x-user-interface.layouts.sidebar.sidebar-list-item
+                href="{{ route('dashboard') }}"
+                active="{{ request()->routeIs('dashboard') }}"
+            >
                 Dashboard
             </x-user-interface.layouts.sidebar.sidebar-list-item>
         </x-user-interface.layouts.sidebar.sidebar-list>
@@ -16,7 +19,10 @@
 
     <div id="user-profile-card" class="z-60 hidden bg-white border border-gray-200 rounded w-11/12 p-1">
         <x-user-interface.layouts.sidebar.sidebar-list>
-            <x-user-interface.layouts.sidebar.sidebar-list-item href="#" active="{{ request()->routeIs('profile.show') }}">
+            <x-user-interface.layouts.sidebar.sidebar-list-item
+                href="#"
+                active="{{ request()->routeIs('profile.show') }}"
+            >
                 Settings
             </x-user-interface.layouts.sidebar.sidebar-list-item>
         </x-user-interface.layouts.sidebar.sidebar-list>
