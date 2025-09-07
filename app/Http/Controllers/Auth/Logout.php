@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+
+class Logout
+{
+    public function __invoke(Request $request): RedirectResponse
+    {
+        $user = $request->user();
+
+        $user->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return to_route('login');
+    }
+}
