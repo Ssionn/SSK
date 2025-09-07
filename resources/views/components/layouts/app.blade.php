@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css?family=anek-kannada:400,500,600" rel="stylesheet" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -18,7 +18,7 @@
 
     <x-layouts.header :pageTitle="$pageTitle" />
 
-    <main class="p-2 sm:p-3 border-l border-t border-gray-200 sm:rounded-tl-2xl overflow-y-auto">
+    <main class="p-2 sm:p-3 border-l border-t border-gray-200 overflow-y-auto">
         {{ $slot }}
     </main>
 
