@@ -16,7 +16,7 @@
                     <input type="password" name="password" id="password" class="border border-polyblue-800 rounded-md p-2">
                 </div>
 
-                <button type="submit" class="w-full bg-polyblue-800 text-white font-bold py-2 px-4 rounded-md hover:bg-polyblue-600 transition duration-300 mt-4">Register</button>
+                <button type="submit" class="w-full bg-polyblue-800 text-white font-bold py-2 px-4 rounded-md hover:bg-polyblue-600 transition duration-300 mt-4">Sign in</button>
             </form>
         </div>
     </div>
